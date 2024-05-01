@@ -1,0 +1,47 @@
+{
+  "build": {
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "xjtumen-tauri1",
+    "version": "0.0.3"
+  },
+  "tauri": {
+
+    "windows": [
+      {
+        "title": "交大門 App",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "men.xjtu.tauri",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "externalBin": [
+        "binaries/xmentccnbg"
+      ]
+    },
+    "allowlist": {
+      "shell": {
+        "sidecar": true,
+        "scope": [
+          { "name": "binaries/xmentccnbg", "sidecar": true }
+        ]
+      }
+    }
+  }
+}
